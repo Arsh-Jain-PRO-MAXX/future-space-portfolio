@@ -1,14 +1,754 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Test</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Arsh Jain | Future Scientist</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:black;
+color:white;
+overflow-x:hidden;
+}
+
+/* Background */
+
+body::before{
+content:'';
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top left, rgba(0,255,255,0.15), transparent 30%),
+radial-gradient(circle at bottom right, rgba(140,0,255,0.18), transparent 30%);
+z-index:-2;
+}
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+background:url('https://www.transparenttextures.com/patterns/stardust.png');
+opacity:0.4;
+z-index:-1;
+animation:stars 100s linear infinite;
+}
+
+@keyframes stars{
+from{
+background-position:0 0;
+}
+to{
+background-position:10000px 5000px;
+}
+}
+
+/* Navbar */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:center;
+gap:35px;
+padding:20px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(12px);
+z-index:999;
+}
+
+.logo{
+position:absolute;
+left:30px;
+font-size:38px;
+font-family:'Orbitron',sans-serif;
+font-weight:900;
+color:#00f7ff;
+text-shadow:
+0 0 15px cyan,
+0 0 30px cyan;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00f7ff;
+text-shadow:0 0 15px cyan;
+}
+
+/* Hero */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2072') center/cover;
+}
+
+.hero h1{
+font-size:90px;
+font-family:'Orbitron',sans-serif;
+font-weight:900;
+color:#00f7ff;
+text-shadow:
+0 0 20px cyan,
+0 0 40px cyan;
+animation:glow 3s infinite alternate;
+}
+
+@keyframes glow{
+from{
+text-shadow:
+0 0 20px cyan,
+0 0 40px cyan;
+}
+to{
+text-shadow:
+0 0 35px cyan,
+0 0 70px cyan;
+}
+}
+
+.hero p{
+font-size:28px;
+margin-top:20px;
+max-width:950px;
+line-height:1.8;
+}
+
+.hero button{
+margin-top:35px;
+padding:16px 40px;
+border:none;
+border-radius:50px;
+background:linear-gradient(45deg,#00f7ff,#005eff);
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 0 25px cyan;
+transition:0.3s;
+}
+
+.hero button:hover{
+transform:scale(1.08);
+}
+
+/* Sections */
+
+section{
+padding:120px 10%;
+}
+
+.section-title{
+font-size:50px;
+font-family:'Orbitron',sans-serif;
+color:#00f7ff;
+text-align:center;
+margin-bottom:45px;
+text-shadow:0 0 15px cyan;
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+padding:35px;
+border-radius:30px;
+backdrop-filter:blur(15px);
+box-shadow:0 0 20px rgba(0,255,255,0.2);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 35px cyan;
+}
+
+/* About */
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about-grid img{
+width:100%;
+border-radius:30px;
+box-shadow:0 0 25px cyan;
+}
+
+.about-text{
+font-size:21px;
+line-height:1.8;
+}
+
+/* Sponsor */
+
+.sponsor-card{
+background:linear-gradient(
+135deg,
+rgba(255,215,0,0.18),
+rgba(255,255,255,0.08)
+);
+
+border:3px solid gold;
+
+box-shadow:
+0 0 20px gold,
+0 0 40px rgba(255,215,0,0.5);
+
+text-align:center;
+}
+
+/* Skills */
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.skill{
+padding:30px;
+text-align:center;
+border-radius:25px;
+background:rgba(255,255,255,0.08);
+box-shadow:0 0 20px rgba(0,255,255,0.2);
+transition:0.3s;
+}
+
+.skill:hover{
+transform:scale(1.05);
+box-shadow:0 0 35px cyan;
+}
+
+.skill h3{
+font-size:28px;
+margin-bottom:15px;
+color:#00f7ff;
+}
+
+/* Projects */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.project{
+padding:30px;
+border-radius:25px;
+background:rgba(255,255,255,0.08);
+box-shadow:0 0 20px rgba(0,255,255,0.2);
+transition:0.3s;
+}
+
+.project:hover{
+transform:translateY(-10px);
+box-shadow:0 0 35px cyan;
+}
+
+.project h3{
+font-size:28px;
+margin-bottom:15px;
+color:#00f7ff;
+}
+
+/* Family */
+
+.family-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.family-card{
+padding:25px;
+text-align:center;
+border-radius:25px;
+background:rgba(255,255,255,0.08);
+box-shadow:0 0 20px rgba(0,255,255,0.2);
+transition:0.3s;
+}
+
+.family-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 35px cyan;
+}
+
+.family-card h3{
+color:#00f7ff;
+margin-bottom:10px;
+}
+
+/* Achievements */
+
+.achievements{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.achievement{
+padding:30px;
+text-align:center;
+border-radius:25px;
+background:rgba(255,255,255,0.08);
+box-shadow:0 0 20px rgba(0,255,255,0.2);
+transition:0.3s;
+}
+
+.achievement:hover{
+transform:scale(1.05);
+box-shadow:0 0 35px cyan;
+}
+
+.achievement h2{
+font-size:50px;
+color:#00f7ff;
+margin-bottom:12px;
+}
+
+/* Quote */
+
+.quote{
+text-align:center;
+font-size:38px;
+font-family:'Orbitron',sans-serif;
+line-height:1.8;
+padding:100px 10%;
+text-shadow:0 0 15px cyan;
+}
+
+/* Contact */
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+font-size:22px;
+margin:15px 0;
+}
+
+/* Footer */
+
+footer{
+padding:30px;
+text-align:center;
+background:#050505;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:50px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.about-grid{
+grid-template-columns:1fr;
+}
+
+.section-title{
+font-size:38px;
+}
+
+nav{
+gap:18px;
+font-size:14px;
+}
+
+.logo{
+font-size:28px;
+}
+
+}
+
+</style>
+
 </head>
-<body style="background:black;color:white;text-align:center;padding-top:100px;font-family:Arial;">
 
-<h1>🚀 ARSH JAIN 🚀</h1>
+<body>
 
-<p>Future Space Scientist</p>
+<div class="stars"></div>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+🚀 AJ
+</div>
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#family">Family</a>
+<a href="#achievements">Achievements</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<h1>
+🚀 ARSH JAIN 🚀
+</h1>
+
+<p>
+Future Space Scientist • AI Creator • Proud Indian 🇮🇳 • Young Innovator
+</p>
+
+<button>
+WELCOME TO MY FUTURE
+</button>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">
+👦 About Me
+</h2>
+
+<div class="about-grid">
+
+<img src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?q=80&w=1974">
+
+<div class="card about-text">
+
+<p>
+Hello! I am <b>Arsh Jain</b>, a super intelligent and creative 12-year-old boy from Jaipur, India 🇮🇳
+</p>
+
+<br>
+
+<p>
+I love playing cricket 🏏, reading space books 🌌, learning artificial intelligence 🤖, coding 💻 and futuristic technology 🚀
+</p>
+
+<br>
+
+<p>
+I enjoy creating futuristic presentations, innovative projects and inspiring ideas for the future.
+</p>
+
+<br>
+
+<p>
+<b>Dream Big. Create Bigger. Inspire The Future.</b>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SPONSOR -->
+
+<section id="sponsor">
+
+<h2 class="section-title">
+🌟 Special Sponsor
+</h2>
+
+<div class="card sponsor-card">
+
+<h2 style="
+font-size:50px;
+color:gold;
+text-shadow:0 0 20px gold;
+">
+
+🏆 Vaishya Community Startup Foundation 🏆
+
+</h2>
+
+<br>
+
+<p style="
+font-size:24px;
+line-height:1.8;
+">
+
+Proudly supporting innovation, creativity, education and future leaders of India 🇮🇳
+
+</p>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="section-title">
+🧠 My Skills
+</h2>
+
+<div class="skills">
+
+<div class="skill">
+<h3>🤖 AI Tools</h3>
+<p>Advanced AI creativity and prompting skills.</p>
+</div>
+
+<div class="skill">
+<h3>🎨 Canva Design</h3>
+<p>Professional futuristic presentation design.</p>
+</div>
+
+<div class="skill">
+<h3>💻 Coding</h3>
+<p>Building creative websites and projects.</p>
+</div>
+
+<div class="skill">
+<h3>🚀 Innovation</h3>
+<p>Creating futuristic ideas and concepts.</p>
+</div>
+
+<div class="skill">
+<h3>🏏 Cricket</h3>
+<p>Strategic thinking and teamwork through sports.</p>
+</div>
+
+<div class="skill">
+<h3>🌌 Space Knowledge</h3>
+<p>Passionate about astronomy and space science.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="section-title">
+🚀 Projects & Interests
+</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>🌌 Future Technology</h3>
+<p>Exploring futuristic AI cities and advanced civilizations.</p>
+</div>
+
+<div class="project">
+<h3>🤖 AI Art</h3>
+<p>Creating cinematic AI-generated futuristic images.</p>
+</div>
+
+<div class="project">
+<h3>🛰️ Space Exploration</h3>
+<p>Studying Mars colonies, rockets and astronauts.</p>
+</div>
+
+<div class="project">
+<h3>🎬 Creative Presentations</h3>
+<p>Designing award-winning futuristic presentations.</p>
+</div>
+
+<div class="project">
+<h3>🦾 Robotics</h3>
+<p>Learning how intelligent robots can help humans.</p>
+</div>
+
+<div class="project">
+<h3>🔬 Science Innovation</h3>
+<p>Combining imagination and technology for the future.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FAMILY -->
+
+<section id="family">
+
+<h2 class="section-title">
+👨‍👩‍👦 My Family
+</h2>
+
+<div class="family-grid">
+
+<div class="family-card">
+<h3>👩 Mother</h3>
+<p>Sonam Jain</p>
+</div>
+
+<div class="family-card">
+<h3>👨 Father</h3>
+<p>Navraj Jain</p>
+</div>
+
+<div class="family-card">
+<h3>👵 Grand Mother</h3>
+<p>Asha Jain</p>
+</div>
+
+<div class="family-card">
+<h3>👴 Grand Father</h3>
+<p>Rajendra Kumar Jain</p>
+</div>
+
+<div class="family-card">
+<h3>👦 Cute Brother</h3>
+<p>Lavit Jain</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ACHIEVEMENTS -->
+
+<section id="achievements">
+
+<h2 class="section-title">
+🏆 Achievements
+</h2>
+
+<div class="achievements">
+
+<div class="achievement">
+<h2>1st</h2>
+<p>Rank among 4000 participants</p>
+</div>
+
+<div class="achievement">
+<h2>🧠</h2>
+<p>SIP Abacus Graduate</p>
+</div>
+
+<div class="achievement">
+<h2>📚</h2>
+<p>One of the Class Toppers</p>
+</div>
+
+<div class="achievement">
+<h2>🚀</h2>
+<p>Strong Extra Knowledge in Class 7</p>
+</div>
+
+<div class="achievement">
+<h2>∞</h2>
+<p>Creativity & Imagination</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- QUOTE -->
+
+<section class="quote">
+
+<p>
+"The future belongs to those who imagine it, build it and never stop dreaming." 🚀
+</p>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">
+📞 Contact Me
+</h2>
+
+<div class="card">
+
+<p>👦 Name: Arsh Jain</p>
+
+<p>🎂 Born: 10 September 2013</p>
+
+<p>🌍 Jaipur, India 🇮🇳</p>
+
+<p>📞 9829333423</p>
+
+<p>📞 8079016832</p>
+
+<p>🚀 Dream Career: Space Scientist</p>
+
+<p>🏏 Hobby: Cricket & Space Reading</p>
+
+<p>🤖 Passion: AI, Technology & Innovation</p>
+
+<br>
+
+<h2 style="
+color:#00f7ff;
+text-shadow:0 0 20px cyan;
+">
+
+THANK YOU FOR VISITING MY FUTURE 🚀
+
+</h2>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+Made with ❤️ by Arsh Jain | Future Scientist of India 🇮🇳
+</p>
+
+</footer>
 
 </body>
+
 </html>
 
