@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>🚀 Arsh Jain | Future Scientist</title>
+<title>🚀 Arsh Jain | Future Space Scientist</title>
 
 <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3212/3212608.png">
 
@@ -69,27 +69,16 @@ background-position:10000px 5000px;
 nav{
 
 position:fixed;
-
 top:0;
-
 width:100%;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 gap:35px;
-
 padding:20px;
-
 background:rgba(0,0,0,0.65);
-
 backdrop-filter:blur(15px);
-
 z-index:999;
-
 border-bottom:1px solid rgba(255,255,255,0.08);
 
 }
@@ -99,21 +88,13 @@ border-bottom:1px solid rgba(255,255,255,0.08);
 .logo{
 
 position:absolute;
-
 left:20px;
-
 top:8px;
-
 display:flex;
-
 align-items:center;
-
 gap:12px;
-
 font-family:'Orbitron',sans-serif;
-
 font-weight:900;
-
 font-size:58px;
 
 text-shadow:
@@ -127,7 +108,6 @@ animation:logoGlow 3s infinite alternate;
 .logo img{
 
 width:60px;
-
 height:60px;
 
 filter:
@@ -146,18 +126,20 @@ background:linear-gradient(
 );
 
 -webkit-background-clip:text;
-
 -webkit-text-fill-color:transparent;
 
 }
 
 @keyframes logoGlow{
+
 from{
 transform:scale(1);
 }
+
 to{
 transform:scale(1.05);
 }
+
 }
 
 nav a{
@@ -180,15 +162,10 @@ text-shadow:0 0 15px cyan;
 height:100vh;
 
 display:flex;
-
 flex-direction:column;
-
 justify-content:center;
-
 align-items:center;
-
 text-align:center;
-
 padding:20px;
 
 background:
@@ -202,7 +179,6 @@ url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2072&au
 font-size:120px;
 
 font-family:'Orbitron',sans-serif;
-
 font-weight:900;
 
 color:#00f7ff;
@@ -260,19 +236,14 @@ line-height:1.8;
 .hero button{
 
 margin-top:40px;
-
 padding:18px 42px;
-
 border:none;
-
 border-radius:50px;
 
 background:linear-gradient(45deg,#00f7ff,#005eff);
 
 color:white;
-
 font-size:20px;
-
 font-weight:bold;
 
 cursor:pointer;
@@ -340,7 +311,7 @@ box-shadow:0 0 35px cyan;
 
 display:grid;
 
-grid-template-columns:1.3fr 1fr;
+grid-template-columns:1.2fr 1fr;
 
 gap:45px;
 
@@ -348,19 +319,29 @@ align-items:center;
 
 }
 
-.about-grid img{
+.about-image{
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+.about-image img{
 
 width:100%;
+max-width:700px;
+height:auto;
 
-height:650px;
-
-object-fit:cover;
+object-fit:contain;
 
 border-radius:30px;
 
 box-shadow:
 0 0 25px cyan,
 0 0 50px rgba(0,255,255,0.4);
+
+display:block;
 
 }
 
@@ -372,6 +353,8 @@ line-height:1.9;
 /* ================= SPONSOR ================= */
 
 .sponsor-card{
+
+margin-top:50px;
 
 text-align:center;
 
@@ -424,9 +407,7 @@ transition:0.3s;
 height:260px;
 
 display:flex;
-
 flex-direction:column;
-
 justify-content:center;
 
 }
@@ -452,7 +433,6 @@ color:#00f7ff;
 .skill p{
 
 font-size:20px;
-
 line-height:1.6;
 
 }
@@ -489,9 +469,7 @@ transition:0.3s;
 height:280px;
 
 display:flex;
-
 flex-direction:column;
-
 justify-content:center;
 
 }
@@ -517,7 +495,6 @@ color:#00f7ff;
 .project p{
 
 font-size:20px;
-
 line-height:1.6;
 
 }
@@ -528,7 +505,7 @@ line-height:1.6;
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
 gap:25px;
 
@@ -581,7 +558,7 @@ font-size:18px;
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
 gap:25px;
 
@@ -655,9 +632,7 @@ font-size:20px;
 
 .skills,
 .projects{
-
 grid-template-columns:repeat(2,1fr);
-
 }
 
 .about-grid{
@@ -703,10 +678,6 @@ gap:15px;
 
 nav a{
 font-size:12px;
-}
-
-.about-grid img{
-height:auto;
 }
 
 }
@@ -761,7 +732,11 @@ WELCOME TO MY FUTURE
 
 <div class="about-grid">
 
+<div class="about-image">
+
 <img src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?q=80&w=1974&auto=format&fit=crop">
+
+</div>
 
 <div class="card about-text">
 
@@ -773,12 +748,6 @@ Hello! I am <b>Arsh Jain</b>, a super intelligent and creative 12-year-old boy f
 
 <p>
 I love playing cricket 🏏, reading space books 🌌, learning artificial intelligence 🤖, coding futuristic websites 💻, exploring robotics 🦾 and discovering amazing technologies that can change the world.
-</p>
-
-<br>
-
-<p>
-I enjoy creating futuristic presentations, AI projects, science innovations and digital experiences that inspire people and showcase the future of technology.
 </p>
 
 <br>
@@ -805,7 +774,223 @@ Dream Big. Create Bigger. Inspire The Future.
 
 </div>
 
+<div class="card sponsor-card">
+
+<h2 style="font-size:40px;color:gold;">
+🏆 Proud Sponsor
+</h2>
+
+<br>
+
+<p style="font-size:28px;">
+Vaishya Community Startup Foundation
+</p>
+
+<br>
+
+<p style="font-size:22px;">
+Supporting creativity, innovation and future young achievers 🚀
+</p>
+
+</div>
+
 </section>
+
+<section id="skills">
+
+<h2 class="section-title">
+🧠 My Skills
+</h2>
+
+<div class="skills">
+
+<div class="skill">
+<h3>🤖 AI Tools</h3>
+<p>Advanced AI creativity and prompting skills.</p>
+</div>
+
+<div class="skill">
+<h3>🎨 Canva Design</h3>
+<p>Professional futuristic designs and presentations.</p>
+</div>
+
+<div class="skill">
+<h3>💻 Coding</h3>
+<p>Building futuristic websites and projects.</p>
+</div>
+
+<div class="skill">
+<h3>🚀 Innovation</h3>
+<p>Creating futuristic ideas and concepts.</p>
+</div>
+
+<div class="skill">
+<h3>🏏 Cricket</h3>
+<p>Strategic thinking and teamwork through sports.</p>
+</div>
+
+<div class="skill">
+<h3>🌌 Space Knowledge</h3>
+<p>Passionate about astronomy and space science.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">
+🚀 Projects & Interests
+</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>🌌 Space Exploration</h3>
+<p>Studying rockets, Mars missions, astronauts and future space technology.</p>
+</div>
+
+<div class="project">
+<h3>🤖 AI Technology</h3>
+<p>Learning futuristic AI tools and creating smart digital projects.</p>
+</div>
+
+<div class="project">
+<h3>💻 Web Development</h3>
+<p>Building futuristic websites with creative glowing designs.</p>
+</div>
+
+<div class="project">
+<h3>🏏 Cricket Passion</h3>
+<p>Improving teamwork, leadership and strategy through cricket.</p>
+</div>
+
+<div class="project">
+<h3>🛰️ Future Scientist</h3>
+<p>Dreaming of helping humanity through science and innovation.</p>
+</div>
+
+<div class="project">
+<h3>🇮🇳 Proud Indian</h3>
+<p>Working hard to make India proud on the global stage.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="family">
+
+<h2 class="section-title">
+👨‍👩‍👦 My Family
+</h2>
+
+<div class="family-grid">
+
+<div class="family-card">
+<h3>👩 Mother</h3>
+<p>Sonam Jain</p>
+</div>
+
+<div class="family-card">
+<h3>👨 Father</h3>
+<p>Navraj Jain</p>
+</div>
+
+<div class="family-card">
+<h3>👵 Grand Mother</h3>
+<p>Asha Jain</p>
+</div>
+
+<div class="family-card">
+<h3>👴 Grand Father</h3>
+<p>Rajendra Kumar Jain</p>
+</div>
+
+<div class="family-card">
+<h3>👦 Cute Brother</h3>
+<p>Lavit Jain</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="achievements">
+
+<h2 class="section-title">
+🏆 Achievements
+</h2>
+
+<div class="achievements">
+
+<div class="achievement">
+<h2>1st</h2>
+<p>Rank among 4000 students</p>
+</div>
+
+<div class="achievement">
+<h2>100%</h2>
+<p>Perfect assignment/project score</p>
+</div>
+
+<div class="achievement">
+<h2>🎓</h2>
+<p>SIP Abacus Graduate</p>
+</div>
+
+<div class="achievement">
+<h2>📚</h2>
+<p>One of the class toppers</p>
+</div>
+
+<div class="achievement">
+<h2>🧠</h2>
+<p>Excellent extra knowledge in Class 7 subjects</p>
+</div>
+
+<div class="achievement">
+<h2>🚀</h2>
+<p>Future space scientist of India</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">
+📞 Contact Me
+</h2>
+
+<div class="card">
+
+<p>👦 Name: Arsh Jain</p>
+<p>🎂 Born: 10 September 2013</p>
+<p>🌍 Jaipur, India</p>
+<p>📱 9829333423</p>
+<p>📱 8079016832</p>
+<p>🚀 Dream Career: Space Scientist</p>
+
+<br>
+
+<h2 style="color:#00f7ff;">
+THANK YOU FOR VISITING MY FUTURE 🚀
+</h2>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+Made with ❤️ by Arsh Jain | Proud Indian 🇮🇳 | Future Scientist 🚀
+</p>
+
+</footer>
 
 </body>
 </html>
