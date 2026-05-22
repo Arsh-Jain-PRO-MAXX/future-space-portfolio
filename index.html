@@ -6,11 +6,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Arsh Jain | Future Scientist</title>
+<title>🚀 Arsh Jain | Future Scientist</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* ================= GLOBAL ================= */
 
 *{
 margin:0;
@@ -58,7 +60,7 @@ background-position:10000px 5000px;
 }
 }
 
-/* Navbar */
+/* ================= NAVBAR ================= */
 
 nav{
 position:fixed;
@@ -66,29 +68,43 @@ top:0;
 width:100%;
 display:flex;
 justify-content:center;
+align-items:center;
 gap:35px;
 padding:20px;
-background:rgba(0,0,0,0.6);
+background:rgba(0,0,0,0.65);
 backdrop-filter:blur(12px);
 z-index:999;
 }
 
 .logo{
 position:absolute;
-left:30px;
-font-size:38px;
+left:20px;
+top:5px;
+font-size:60px;
 font-family:'Orbitron',sans-serif;
 font-weight:900;
 color:#00f7ff;
 text-shadow:
-0 0 15px cyan,
-0 0 30px cyan;
+0 0 20px cyan,
+0 0 40px cyan,
+0 0 80px cyan;
+animation:logoGlow 3s infinite alternate;
+}
+
+@keyframes logoGlow{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.05);
+}
 }
 
 nav a{
 color:white;
 text-decoration:none;
 font-weight:bold;
+font-size:17px;
 transition:0.3s;
 }
 
@@ -97,7 +113,7 @@ color:#00f7ff;
 text-shadow:0 0 15px cyan;
 }
 
-/* Hero */
+/* ================= HERO ================= */
 
 .hero{
 height:100vh;
@@ -107,19 +123,23 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
+
 background:
-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
 url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2072') center/cover;
 }
 
 .hero h1{
-font-size:90px;
+font-size:95px;
 font-family:'Orbitron',sans-serif;
 font-weight:900;
 color:#00f7ff;
+
 text-shadow:
 0 0 20px cyan,
-0 0 40px cyan;
+0 0 40px cyan,
+0 0 80px cyan;
+
 animation:glow 3s infinite alternate;
 }
 
@@ -131,26 +151,26 @@ text-shadow:
 }
 to{
 text-shadow:
-0 0 35px cyan,
-0 0 70px cyan;
+0 0 40px cyan,
+0 0 80px cyan;
 }
 }
 
 .hero p{
 font-size:28px;
-margin-top:20px;
-max-width:950px;
+margin-top:25px;
+max-width:900px;
 line-height:1.8;
 }
 
 .hero button{
-margin-top:35px;
-padding:16px 40px;
+margin-top:40px;
+padding:18px 42px;
 border:none;
 border-radius:50px;
 background:linear-gradient(45deg,#00f7ff,#005eff);
 color:white;
-font-size:18px;
+font-size:20px;
 font-weight:bold;
 cursor:pointer;
 box-shadow:0 0 25px cyan;
@@ -161,7 +181,7 @@ transition:0.3s;
 transform:scale(1.08);
 }
 
-/* Sections */
+/* ================= SECTIONS ================= */
 
 section{
 padding:120px 10%;
@@ -170,9 +190,9 @@ padding:120px 10%;
 .section-title{
 font-size:50px;
 font-family:'Orbitron',sans-serif;
-color:#00f7ff;
 text-align:center;
 margin-bottom:45px;
+color:#00f7ff;
 text-shadow:0 0 15px cyan;
 }
 
@@ -181,7 +201,10 @@ background:rgba(255,255,255,0.08);
 padding:35px;
 border-radius:30px;
 backdrop-filter:blur(15px);
-box-shadow:0 0 20px rgba(0,255,255,0.2);
+
+box-shadow:
+0 0 20px rgba(0,255,255,0.2);
+
 transition:0.3s;
 }
 
@@ -190,7 +213,7 @@ transform:translateY(-8px);
 box-shadow:0 0 35px cyan;
 }
 
-/* About */
+/* ================= ABOUT ================= */
 
 .about-grid{
 display:grid;
@@ -210,10 +233,13 @@ font-size:21px;
 line-height:1.8;
 }
 
-/* Sponsor */
+/* ================= SPONSOR ================= */
 
 .sponsor-card{
-background:linear-gradient(
+text-align:center;
+
+background:
+linear-gradient(
 135deg,
 rgba(255,215,0,0.18),
 rgba(255,255,255,0.08)
@@ -223,25 +249,26 @@ border:3px solid gold;
 
 box-shadow:
 0 0 20px gold,
-0 0 40px rgba(255,215,0,0.5);
-
-text-align:center;
+0 0 45px rgba(255,215,0,0.4);
 }
 
-/* Skills */
+/* ================= SKILLS ================= */
 
 .skills{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:30px;
 }
 
 .skill{
 padding:30px;
-text-align:center;
 border-radius:25px;
+text-align:center;
 background:rgba(255,255,255,0.08);
-box-shadow:0 0 20px rgba(0,255,255,0.2);
+
+box-shadow:
+0 0 20px rgba(0,255,255,0.2);
+
 transition:0.3s;
 }
 
@@ -252,11 +279,11 @@ box-shadow:0 0 35px cyan;
 
 .skill h3{
 font-size:28px;
-margin-bottom:15px;
+margin-bottom:12px;
 color:#00f7ff;
 }
 
-/* Projects */
+/* ================= PROJECTS ================= */
 
 .projects{
 display:grid;
@@ -268,7 +295,10 @@ gap:30px;
 padding:30px;
 border-radius:25px;
 background:rgba(255,255,255,0.08);
-box-shadow:0 0 20px rgba(0,255,255,0.2);
+
+box-shadow:
+0 0 20px rgba(0,255,255,0.2);
+
 transition:0.3s;
 }
 
@@ -283,7 +313,7 @@ margin-bottom:15px;
 color:#00f7ff;
 }
 
-/* Family */
+/* ================= FAMILY ================= */
 
 .family-grid{
 display:grid;
@@ -293,10 +323,13 @@ gap:25px;
 
 .family-card{
 padding:25px;
-text-align:center;
 border-radius:25px;
+text-align:center;
 background:rgba(255,255,255,0.08);
-box-shadow:0 0 20px rgba(0,255,255,0.2);
+
+box-shadow:
+0 0 20px rgba(0,255,255,0.2);
+
 transition:0.3s;
 }
 
@@ -306,11 +339,11 @@ box-shadow:0 0 35px cyan;
 }
 
 .family-card h3{
-color:#00f7ff;
 margin-bottom:10px;
+color:#00f7ff;
 }
 
-/* Achievements */
+/* ================= ACHIEVEMENTS ================= */
 
 .achievements{
 display:grid;
@@ -320,10 +353,13 @@ gap:25px;
 
 .achievement{
 padding:30px;
-text-align:center;
 border-radius:25px;
+text-align:center;
 background:rgba(255,255,255,0.08);
-box-shadow:0 0 20px rgba(0,255,255,0.2);
+
+box-shadow:
+0 0 20px rgba(0,255,255,0.2);
+
 transition:0.3s;
 }
 
@@ -334,11 +370,11 @@ box-shadow:0 0 35px cyan;
 
 .achievement h2{
 font-size:50px;
+margin-bottom:10px;
 color:#00f7ff;
-margin-bottom:12px;
 }
 
-/* Quote */
+/* ================= QUOTE ================= */
 
 .quote{
 text-align:center;
@@ -349,7 +385,7 @@ padding:100px 10%;
 text-shadow:0 0 15px cyan;
 }
 
-/* Contact */
+/* ================= CONTACT ================= */
 
 .contact{
 text-align:center;
@@ -360,7 +396,7 @@ font-size:22px;
 margin:15px 0;
 }
 
-/* Footer */
+/* ================= FOOTER ================= */
 
 footer{
 padding:30px;
@@ -369,7 +405,7 @@ background:#050505;
 border-top:1px solid rgba(255,255,255,0.08);
 }
 
-/* Responsive */
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:900px){
 
@@ -389,13 +425,17 @@ grid-template-columns:1fr;
 font-size:38px;
 }
 
-nav{
-gap:18px;
-font-size:14px;
+.logo{
+font-size:35px;
+top:12px;
 }
 
-.logo{
-font-size:28px;
+nav{
+gap:15px;
+}
+
+nav a{
+font-size:13px;
 }
 
 }
@@ -465,13 +505,13 @@ Hello! I am <b>Arsh Jain</b>, a super intelligent and creative 12-year-old boy f
 <br>
 
 <p>
-I love playing cricket 🏏, reading space books 🌌, learning artificial intelligence 🤖, coding 💻 and futuristic technology 🚀
+I love cricket 🏏, reading space books 🌌, learning AI 🤖, coding 💻 and futuristic technology 🚀
 </p>
 
 <br>
 
 <p>
-I enjoy creating futuristic presentations, innovative projects and inspiring ideas for the future.
+My dream is to become a great space scientist and inspire the future generation.
 </p>
 
 <br>
@@ -513,7 +553,7 @@ font-size:24px;
 line-height:1.8;
 ">
 
-Proudly supporting innovation, creativity, education and future leaders of India 🇮🇳
+Proudly supporting innovation, creativity and future leaders of India 🇮🇳
 
 </p>
 
@@ -538,12 +578,12 @@ Proudly supporting innovation, creativity, education and future leaders of India
 
 <div class="skill">
 <h3>🎨 Canva Design</h3>
-<p>Professional futuristic presentation design.</p>
+<p>Professional futuristic designs and presentations.</p>
 </div>
 
 <div class="skill">
 <h3>💻 Coding</h3>
-<p>Building creative websites and projects.</p>
+<p>Building creative futuristic websites and projects.</p>
 </div>
 
 <div class="skill">
@@ -587,7 +627,7 @@ Proudly supporting innovation, creativity, education and future leaders of India
 
 <div class="project">
 <h3>🛰️ Space Exploration</h3>
-<p>Studying Mars colonies, rockets and astronauts.</p>
+<p>Studying rockets, Mars colonies and astronauts.</p>
 </div>
 
 <div class="project">
@@ -597,7 +637,7 @@ Proudly supporting innovation, creativity, education and future leaders of India
 
 <div class="project">
 <h3>🦾 Robotics</h3>
-<p>Learning how intelligent robots can help humans.</p>
+<p>Learning how intelligent robots help humans.</p>
 </div>
 
 <div class="project">
@@ -751,4 +791,3 @@ Made with ❤️ by Arsh Jain | Future Scientist of India 🇮🇳
 </body>
 
 </html>
-
