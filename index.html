@@ -39,8 +39,8 @@ width:100%;
 height:100%;
 
 background:
-radial-gradient(circle at top left, rgba(0,255,255,0.15), transparent 30%),
-radial-gradient(circle at bottom right, rgba(140,0,255,0.18), transparent 30%);
+radial-gradient(circle at top left, rgba(0,255,255,0.12), transparent 30%),
+radial-gradient(circle at bottom right, rgba(132,0,255,0.18), transparent 30%);
 
 z-index:-2;
 }
@@ -102,7 +102,7 @@ position:absolute;
 
 left:20px;
 
-top:6px;
+top:8px;
 
 display:flex;
 
@@ -116,12 +116,9 @@ font-weight:900;
 
 font-size:58px;
 
-color:#00f7ff;
-
 text-shadow:
 0 0 20px cyan,
-0 0 40px cyan,
-0 0 80px cyan;
+0 0 40px cyan;
 
 animation:logoGlow 3s infinite alternate;
 
@@ -129,9 +126,9 @@ animation:logoGlow 3s infinite alternate;
 
 .logo img{
 
-width:58px;
+width:60px;
 
-height:58px;
+height:60px;
 
 filter:
 drop-shadow(0 0 15px cyan)
@@ -195,8 +192,8 @@ text-align:center;
 padding:20px;
 
 background:
-linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
-url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2072') center/cover;
+linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
+url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2072&auto=format&fit=crop') center/cover no-repeat;
 
 }
 
@@ -290,7 +287,7 @@ transition:0.3s;
 transform:scale(1.08);
 }
 
-/* ================= GENERAL SECTION ================= */
+/* ================= GENERAL ================= */
 
 section{
 padding:120px 10%;
@@ -343,7 +340,7 @@ box-shadow:0 0 35px cyan;
 
 display:grid;
 
-grid-template-columns:1.4fr 1fr;
+grid-template-columns:1.3fr 1fr;
 
 gap:45px;
 
@@ -355,7 +352,7 @@ align-items:center;
 
 width:100%;
 
-height:100%;
+height:650px;
 
 object-fit:cover;
 
@@ -625,32 +622,6 @@ color:#00f7ff;
 
 }
 
-.achievement p{
-
-font-size:18px;
-
-line-height:1.5;
-
-}
-
-/* ================= QUOTE ================= */
-
-.quote{
-
-text-align:center;
-
-font-size:40px;
-
-font-family:'Orbitron',sans-serif;
-
-line-height:1.8;
-
-padding:100px 10%;
-
-text-shadow:0 0 15px cyan;
-
-}
-
 /* ================= CONTACT ================= */
 
 .contact{
@@ -658,11 +629,8 @@ text-align:center;
 }
 
 .contact p{
-
 font-size:24px;
-
 margin:16px 0;
-
 }
 
 /* ================= FOOTER ================= */
@@ -693,9 +661,7 @@ grid-template-columns:repeat(2,1fr);
 }
 
 .about-grid{
-
 grid-template-columns:1fr;
-
 }
 
 }
@@ -706,9 +672,7 @@ grid-template-columns:1fr;
 .projects,
 .family-grid,
 .achievements{
-
 grid-template-columns:1fr;
-
 }
 
 .hero h1{
@@ -741,17 +705,10 @@ nav a{
 font-size:12px;
 }
 
+.about-grid img{
+height:auto;
 }
 
-/* ================= SCROLLBAR ================= */
-
-::-webkit-scrollbar{
-width:10px;
-}
-
-::-webkit-scrollbar-thumb{
-background:cyan;
-border-radius:20px;
 }
 
 </style>
@@ -784,9 +741,7 @@ border-radius:20px;
 
 <section class="hero" id="home">
 
-<h1>
-🚀 ARSH JAIN 🚀
-</h1>
+<h1>🚀 ARSH JAIN 🚀</h1>
 
 <p>
 Future Space Scientist • AI Creator • Proud Indian 🇮🇳 • Young Innovator
@@ -806,12 +761,12 @@ WELCOME TO MY FUTURE
 
 <div class="about-grid">
 
-<img src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?q=80&w=1974">
+<img src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?q=80&w=1974&auto=format&fit=crop">
 
 <div class="card about-text">
 
 <p>
-Hello! I am <b>Arsh Jain</b>, a super intelligent, creative and futuristic 12-year-old boy from Jaipur, India 🇮🇳 who dreams of becoming one of the greatest space scientists in the future.
+Hello! I am <b>Arsh Jain</b>, a super intelligent and creative 12-year-old boy from Jaipur, India 🇮🇳 who dreams of becoming one of the greatest space scientists in the future.
 </p>
 
 <br>
@@ -823,7 +778,7 @@ I love playing cricket 🏏, reading space books 🌌, learning artificial intel
 <br>
 
 <p>
-I enjoy creating award-winning futuristic presentations, AI projects, science innovations and creative digital experiences that inspire people and showcase the future of technology.
+I enjoy creating futuristic presentations, AI projects, science innovations and digital experiences that inspire people and showcase the future of technology.
 </p>
 
 <br>
@@ -852,252 +807,5 @@ Dream Big. Create Bigger. Inspire The Future.
 
 </section>
 
-<section id="sponsor">
-
-<h2 class="section-title">
-🌟 Special Sponsor
-</h2>
-
-<div class="card sponsor-card">
-
-<h2 style="
-font-size:50px;
-color:gold;
-text-shadow:0 0 20px gold;
-">
-
-🏆 Vaishya Community Startup Foundation 🏆
-
-</h2>
-
-<br>
-
-<p style="
-font-size:24px;
-line-height:1.8;
-">
-
-Proudly supporting innovation, creativity, education and future leaders of India 🇮🇳
-
-</p>
-
-</div>
-
-</section>
-
-<section id="skills">
-
-<h2 class="section-title">
-🧠 My Skills
-</h2>
-
-<div class="skills">
-
-<div class="skill">
-<h3>🤖 AI Tools</h3>
-<p>Advanced AI creativity and prompting skills.</p>
-</div>
-
-<div class="skill">
-<h3>🎨 Canva Design</h3>
-<p>Professional futuristic presentation and website design.</p>
-</div>
-
-<div class="skill">
-<h3>💻 Coding</h3>
-<p>Building futuristic websites and creative projects.</p>
-</div>
-
-<div class="skill">
-<h3>🚀 Innovation</h3>
-<p>Creating futuristic ideas and concepts.</p>
-</div>
-
-<div class="skill">
-<h3>🏏 Cricket</h3>
-<p>Strategic thinking and teamwork through sports.</p>
-</div>
-
-<div class="skill">
-<h3>🌌 Space Knowledge</h3>
-<p>Passionate about astronomy and future space science.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="projects">
-
-<h2 class="section-title">
-🚀 Projects & Interests
-</h2>
-
-<div class="projects">
-
-<div class="project">
-<h3>🌌 Future Technology</h3>
-<p>Exploring futuristic AI cities and advanced civilizations.</p>
-</div>
-
-<div class="project">
-<h3>🤖 AI Art</h3>
-<p>Creating cinematic futuristic AI-generated images.</p>
-</div>
-
-<div class="project">
-<h3>🛰️ Space Exploration</h3>
-<p>Studying rockets, astronauts and Mars colonies.</p>
-</div>
-
-<div class="project">
-<h3>🎬 Creative Presentations</h3>
-<p>Designing award-winning futuristic presentations.</p>
-</div>
-
-<div class="project">
-<h3>🦾 Robotics</h3>
-<p>Learning how intelligent robots help humans.</p>
-</div>
-
-<div class="project">
-<h3>🔬 Science Innovation</h3>
-<p>Combining imagination and technology for the future.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="family">
-
-<h2 class="section-title">
-👨‍👩‍👦 My Family
-</h2>
-
-<div class="family-grid">
-
-<div class="family-card">
-<h3>👩 Mother</h3>
-<p>Sonam Jain</p>
-</div>
-
-<div class="family-card">
-<h3>👨 Father</h3>
-<p>Navraj Jain</p>
-</div>
-
-<div class="family-card">
-<h3>👵 Grand Mother</h3>
-<p>Asha Jain</p>
-</div>
-
-<div class="family-card">
-<h3>👴 Grand Father</h3>
-<p>Rajendra Kumar Jain</p>
-</div>
-
-<div class="family-card">
-<h3>👦 Cute Brother</h3>
-<p>Lavit Jain</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="achievements">
-
-<h2 class="section-title">
-🏆 Achievements
-</h2>
-
-<div class="achievements">
-
-<div class="achievement">
-<h2>1st</h2>
-<p>Rank among 4000 participants</p>
-</div>
-
-<div class="achievement">
-<h2>🧠</h2>
-<p>SIP Abacus Graduate</p>
-</div>
-
-<div class="achievement">
-<h2>📚</h2>
-<p>One of the Class Toppers</p>
-</div>
-
-<div class="achievement">
-<h2>🚀</h2>
-<p>Strong Extra Knowledge in Class 7</p>
-</div>
-
-<div class="achievement">
-<h2>∞</h2>
-<p>Creativity & Imagination</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="quote">
-
-<p>
-"The future belongs to those who imagine it, build it and never stop dreaming." 🚀
-</p>
-
-</section>
-
-<section id="contact" class="contact">
-
-<h2 class="section-title">
-📞 Contact Me
-</h2>
-
-<div class="card">
-
-<p>👦 Name: Arsh Jain</p>
-
-<p>🎂 Born: 10 September 2013</p>
-
-<p>🌍 Jaipur, India 🇮🇳</p>
-
-<p>📞 9829333423</p>
-
-<p>📞 8079016832</p>
-
-<p>🚀 Dream Career: Space Scientist</p>
-
-<p>🏏 Hobby: Cricket & Space Reading</p>
-
-<p>🤖 Passion: AI, Technology & Innovation</p>
-
-<br>
-
-<h2 style="
-color:#00f7ff;
-text-shadow:0 0 20px cyan;
-">
-
-THANK YOU FOR VISITING MY FUTURE 🚀
-
-</h2>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>
-Made with ❤️ by Arsh Jain | Future Scientist of India 🇮🇳
-</p>
-
-</footer>
-
 </body>
-
 </html>
