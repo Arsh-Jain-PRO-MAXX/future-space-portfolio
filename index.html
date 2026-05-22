@@ -8,11 +8,7 @@
 
 <title>🚀 Arsh Jain | Future Scientist</title>
 
-<!-- TAB LOGO -->
-
-<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3212/3212608.png">
-
-<!-- GOOGLE FONTS -->
+<link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3212/3212608.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -34,16 +30,12 @@ color:white;
 overflow-x:hidden;
 }
 
-/* ================= ANIMATED BACKGROUND ================= */
+/* ================= BACKGROUND ================= */
 
 body::before{
-
 content:'';
-
 position:fixed;
-
 width:100%;
-
 height:100%;
 
 background:
@@ -51,37 +43,25 @@ radial-gradient(circle at top left, rgba(0,255,255,0.15), transparent 30%),
 radial-gradient(circle at bottom right, rgba(140,0,255,0.18), transparent 30%);
 
 z-index:-2;
-
 }
 
 .stars{
-
 position:fixed;
-
 width:100%;
-
 height:100%;
-
 background:url('https://www.transparenttextures.com/patterns/stardust.png');
-
-opacity:0.4;
-
+opacity:0.35;
 z-index:-1;
-
 animation:stars 100s linear infinite;
-
 }
 
 @keyframes stars{
-
 from{
 background-position:0 0;
 }
-
 to{
 background-position:10000px 5000px;
 }
-
 }
 
 /* ================= NAVBAR ================= */
@@ -106,7 +86,7 @@ padding:20px;
 
 background:rgba(0,0,0,0.65);
 
-backdrop-filter:blur(12px);
+backdrop-filter:blur(15px);
 
 z-index:999;
 
@@ -114,7 +94,7 @@ border-bottom:1px solid rgba(255,255,255,0.08);
 
 }
 
-/* LOGO */
+/* ================= LOGO ================= */
 
 .logo{
 
@@ -122,13 +102,19 @@ position:absolute;
 
 left:20px;
 
-top:5px;
+top:6px;
 
-font-size:60px;
+display:flex;
+
+align-items:center;
+
+gap:12px;
 
 font-family:'Orbitron',sans-serif;
 
 font-weight:900;
+
+font-size:58px;
 
 color:#00f7ff;
 
@@ -141,41 +127,56 @@ animation:logoGlow 3s infinite alternate;
 
 }
 
-@keyframes logoGlow{
+.logo img{
 
+width:58px;
+
+height:58px;
+
+filter:
+drop-shadow(0 0 15px cyan)
+drop-shadow(0 0 30px cyan);
+
+}
+
+.logo span{
+
+background:linear-gradient(
+90deg,
+#00f7ff,
+#ffffff,
+#00f7ff
+);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+@keyframes logoGlow{
 from{
 transform:scale(1);
 }
-
 to{
 transform:scale(1.05);
 }
-
 }
 
 nav a{
-
 color:white;
-
 text-decoration:none;
-
 font-weight:bold;
-
 font-size:17px;
-
 transition:0.3s;
-
 }
 
 nav a:hover{
-
 color:#00f7ff;
-
 text-shadow:0 0 15px cyan;
-
 }
 
-/* ================= HERO SECTION ================= */
+/* ================= HERO ================= */
 
 .hero{
 
@@ -201,7 +202,7 @@ url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2072') 
 
 .hero h1{
 
-font-size:95px;
+font-size:120px;
 
 font-family:'Orbitron',sans-serif;
 
@@ -214,11 +215,13 @@ text-shadow:
 0 0 40px cyan,
 0 0 80px cyan;
 
-animation:glow 3s infinite alternate;
+animation:
+heroGlow 3s infinite alternate,
+float 4s ease-in-out infinite;
 
 }
 
-@keyframes glow{
+@keyframes heroGlow{
 
 from{
 text-shadow:
@@ -234,16 +237,27 @@ text-shadow:
 
 }
 
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
 .hero p{
-
 font-size:28px;
-
 margin-top:25px;
-
 max-width:950px;
-
 line-height:1.8;
-
 }
 
 .hero button{
@@ -273,28 +287,24 @@ transition:0.3s;
 }
 
 .hero button:hover{
-
 transform:scale(1.08);
-
 }
 
 /* ================= GENERAL SECTION ================= */
 
 section{
-
 padding:120px 10%;
-
 }
 
 .section-title{
 
-font-size:50px;
+font-size:52px;
 
 font-family:'Orbitron',sans-serif;
 
 text-align:center;
 
-margin-bottom:45px;
+margin-bottom:55px;
 
 color:#00f7ff;
 
@@ -333,9 +343,9 @@ box-shadow:0 0 35px cyan;
 
 display:grid;
 
-grid-template-columns:1fr 1fr;
+grid-template-columns:1.4fr 1fr;
 
-gap:40px;
+gap:45px;
 
 align-items:center;
 
@@ -345,18 +355,21 @@ align-items:center;
 
 width:100%;
 
+height:100%;
+
+object-fit:cover;
+
 border-radius:30px;
 
-box-shadow:0 0 25px cyan;
+box-shadow:
+0 0 25px cyan,
+0 0 50px rgba(0,255,255,0.4);
 
 }
 
 .about-text{
-
-font-size:21px;
-
+font-size:22px;
 line-height:1.9;
-
 }
 
 /* ================= SPONSOR ================= */
@@ -386,15 +399,19 @@ box-shadow:
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+grid-template-columns:repeat(3,1fr);
 
-gap:30px;
+gap:35px;
+
+max-width:1200px;
+
+margin:auto;
 
 }
 
 .skill{
 
-padding:30px;
+padding:35px;
 
 border-radius:25px;
 
@@ -406,6 +423,14 @@ box-shadow:
 0 0 20px rgba(0,255,255,0.2);
 
 transition:0.3s;
+
+height:260px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
 
 }
 
@@ -419,11 +444,19 @@ box-shadow:0 0 35px cyan;
 
 .skill h3{
 
-font-size:28px;
+font-size:34px;
 
-margin-bottom:12px;
+margin-bottom:15px;
 
 color:#00f7ff;
+
+}
+
+.skill p{
+
+font-size:20px;
+
+line-height:1.6;
 
 }
 
@@ -433,15 +466,19 @@ color:#00f7ff;
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(3,1fr);
 
-gap:30px;
+gap:35px;
+
+max-width:1300px;
+
+margin:auto;
 
 }
 
 .project{
 
-padding:30px;
+padding:35px;
 
 border-radius:25px;
 
@@ -451,6 +488,14 @@ box-shadow:
 0 0 20px rgba(0,255,255,0.2);
 
 transition:0.3s;
+
+height:280px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
 
 }
 
@@ -464,11 +509,19 @@ box-shadow:0 0 35px cyan;
 
 .project h3{
 
-font-size:28px;
+font-size:30px;
 
-margin-bottom:15px;
+margin-bottom:18px;
 
 color:#00f7ff;
+
+}
+
+.project p{
+
+font-size:20px;
+
+line-height:1.6;
 
 }
 
@@ -478,7 +531,7 @@ color:#00f7ff;
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 
 gap:25px;
 
@@ -511,9 +564,17 @@ box-shadow:0 0 35px cyan;
 
 .family-card h3{
 
-margin-bottom:10px;
+margin-bottom:12px;
 
 color:#00f7ff;
+
+font-size:24px;
+
+}
+
+.family-card p{
+
+font-size:18px;
 
 }
 
@@ -523,7 +584,7 @@ color:#00f7ff;
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 
 gap:25px;
 
@@ -558,9 +619,17 @@ box-shadow:0 0 35px cyan;
 
 font-size:50px;
 
-margin-bottom:10px;
+margin-bottom:12px;
 
 color:#00f7ff;
+
+}
+
+.achievement p{
+
+font-size:18px;
+
+line-height:1.5;
 
 }
 
@@ -570,7 +639,7 @@ color:#00f7ff;
 
 text-align:center;
 
-font-size:38px;
+font-size:40px;
 
 font-family:'Orbitron',sans-serif;
 
@@ -585,16 +654,14 @@ text-shadow:0 0 15px cyan;
 /* ================= CONTACT ================= */
 
 .contact{
-
 text-align:center;
-
 }
 
 .contact p{
 
-font-size:22px;
+font-size:24px;
 
-margin:15px 0;
+margin:16px 0;
 
 }
 
@@ -610,22 +677,46 @@ background:#050505;
 
 border-top:1px solid rgba(255,255,255,0.08);
 
+font-size:20px;
+
 }
 
 /* ================= RESPONSIVE ================= */
 
-@media(max-width:900px){
+@media(max-width:1100px){
+
+.skills,
+.projects{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.about-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.skills,
+.projects,
+.family-grid,
+.achievements{
+
+grid-template-columns:1fr;
+
+}
 
 .hero h1{
-font-size:50px;
+font-size:55px;
 }
 
 .hero p{
 font-size:20px;
-}
-
-.about-grid{
-grid-template-columns:1fr;
 }
 
 .section-title{
@@ -637,14 +728,30 @@ font-size:35px;
 top:12px;
 }
 
+.logo img{
+width:38px;
+height:38px;
+}
+
 nav{
 gap:15px;
 }
 
 nav a{
-font-size:13px;
+font-size:12px;
 }
 
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+background:cyan;
+border-radius:20px;
 }
 
 </style>
@@ -655,12 +762,14 @@ font-size:13px;
 
 <div class="stars"></div>
 
-<!-- ================= NAVBAR ================= -->
-
 <nav>
 
 <div class="logo">
-🚀 AJ
+
+<img src="https://cdn-icons-png.flaticon.com/512/3212/3212608.png">
+
+<span>AJ</span>
+
 </div>
 
 <a href="#home">Home</a>
@@ -672,8 +781,6 @@ font-size:13px;
 <a href="#contact">Contact</a>
 
 </nav>
-
-<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
 
@@ -690,8 +797,6 @@ WELCOME TO MY FUTURE
 </button>
 
 </section>
-
-<!-- ================= ABOUT ================= -->
 
 <section id="about">
 
@@ -747,8 +852,6 @@ Dream Big. Create Bigger. Inspire The Future.
 
 </section>
 
-<!-- ================= SPONSOR ================= -->
-
 <section id="sponsor">
 
 <h2 class="section-title">
@@ -781,8 +884,6 @@ Proudly supporting innovation, creativity, education and future leaders of India
 </div>
 
 </section>
-
-<!-- ================= SKILLS ================= -->
 
 <section id="skills">
 
@@ -826,8 +927,6 @@ Proudly supporting innovation, creativity, education and future leaders of India
 
 </section>
 
-<!-- ================= PROJECTS ================= -->
-
 <section id="projects">
 
 <h2 class="section-title">
@@ -870,8 +969,6 @@ Proudly supporting innovation, creativity, education and future leaders of India
 
 </section>
 
-<!-- ================= FAMILY ================= -->
-
 <section id="family">
 
 <h2 class="section-title">
@@ -908,8 +1005,6 @@ Proudly supporting innovation, creativity, education and future leaders of India
 </div>
 
 </section>
-
-<!-- ================= ACHIEVEMENTS ================= -->
 
 <section id="achievements">
 
@@ -948,8 +1043,6 @@ Proudly supporting innovation, creativity, education and future leaders of India
 
 </section>
 
-<!-- ================= QUOTE ================= -->
-
 <section class="quote">
 
 <p>
@@ -957,8 +1050,6 @@ Proudly supporting innovation, creativity, education and future leaders of India
 </p>
 
 </section>
-
-<!-- ================= CONTACT ================= -->
 
 <section id="contact" class="contact">
 
@@ -998,8 +1089,6 @@ THANK YOU FOR VISITING MY FUTURE 🚀
 </div>
 
 </section>
-
-<!-- ================= FOOTER ================= -->
 
 <footer>
 
