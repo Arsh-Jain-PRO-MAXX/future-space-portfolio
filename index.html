@@ -1,31 +1,264 @@
-<!-- ========================= -->
-<!-- PREMIUM FUTURE UPGRADES -->
-<!-- ========================= -->
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- REPLACE OLD HERO TITLE WITH THIS -->
+<head>
 
-<h1 class="shine-name">
-🚀 ARSH JAIN 🚀
-</h1>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<p id="typing"></p>
+<title>Arsh Jain | Future Space Scientist</title>
 
-<!-- ========================= -->
-<!-- ADD THIS CSS -->
-<!-- PASTE INSIDE <style> -->
-<!-- ========================= -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-.shine-name{
+<style>
 
-font-size:100px;
+/* ========================= */
+/* GLOBAL */
+/* ========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:black;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+/* Animated Cosmic Background */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+background:
+radial-gradient(circle at 20% 20%, rgba(0,255,255,0.15), transparent 25%),
+radial-gradient(circle at 80% 30%, rgba(255,0,255,0.15), transparent 25%),
+radial-gradient(circle at 50% 80%, rgba(0,100,255,0.15), transparent 25%);
+
+z-index:-3;
+
+animation:bgmove 20s infinite alternate;
+
+}
+
+@keyframes bgmove{
+
+0%{
+transform:scale(1);
+}
+
+100%{
+transform:scale(1.15);
+}
+
+}
+
+/* Floating Stars */
+
+.stars{
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+background:url('https://www.transparenttextures.com/patterns/stardust.png');
+
+opacity:0.4;
+
+z-index:-2;
+
+animation:stars 100s linear infinite;
+
+}
+
+@keyframes stars{
+
+from{
+background-position:0 0;
+}
+
+to{
+background-position:10000px 5000px;
+}
+
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+nav{
+
+position:fixed;
+
+top:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:40px;
+
+padding:22px;
+
+background:rgba(0,0,0,0.6);
+
+backdrop-filter:blur(15px);
+
+z-index:999;
+
+border-bottom:1px solid rgba(255,255,255,0.08);
+
+}
+
+/* Logo */
+
+.logo{
+
+position:absolute;
+
+left:35px;
+
+font-size:42px;
+
 font-family:'Orbitron',sans-serif;
+
+font-weight:900;
 
 background:linear-gradient(
 90deg,
 #00f7ff,
 #ffffff,
+#00f7ff
+);
+
+background-size:300%;
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+animation:shine 6s linear infinite;
+
+text-shadow:
+0 0 15px cyan,
+0 0 30px cyan,
+0 0 60px cyan;
+
+}
+
+.logo-sub{
+
+position:absolute;
+
+left:38px;
+
+top:65px;
+
+font-size:11px;
+
+letter-spacing:4px;
+
+color:#00f7ff;
+
+text-transform:uppercase;
+
+}
+
+@keyframes shine{
+
+0%{
+background-position:0%;
+}
+
+100%{
+background-position:300%;
+}
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:18px;
+
+font-weight:bold;
+
+transition:0.3s;
+
+}
+
+nav a:hover{
+
+color:#00f7ff;
+
+text-shadow:0 0 20px cyan;
+
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+background:
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
+url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2072') center/cover;
+
+}
+
+.hero h1{
+
+font-size:100px;
+
+font-family:'Orbitron',sans-serif;
+
+font-weight:900;
+
+background:linear-gradient(
+90deg,
 #00f7ff,
-#7df9ff,
 #ffffff,
 #00f7ff
 );
@@ -33,6 +266,7 @@ background:linear-gradient(
 background-size:400%;
 
 -webkit-background-clip:text;
+
 -webkit-text-fill-color:transparent;
 
 animation:shine 8s linear infinite;
@@ -44,34 +278,164 @@ text-shadow:
 
 }
 
-@keyframes shine{
+.hero p{
 
-0%{
-background-position:0%;
+font-size:28px;
+
+margin-top:20px;
+
+max-width:1000px;
+
+line-height:1.8;
+
 }
 
-100%{
-background-position:400%;
-}
+.hero button{
+
+margin-top:45px;
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:50px;
+
+background:linear-gradient(
+45deg,
+#00f7ff,
+#0066ff
+);
+
+color:white;
+
+font-size:20px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:0.4s;
+
+box-shadow:
+0 0 20px cyan,
+0 0 40px rgba(0,255,255,0.5);
 
 }
 
-/* Special Sponsor */
+.hero button:hover{
+
+transform:scale(1.1);
+
+}
+
+/* ========================= */
+/* GENERAL SECTION */
+/* ========================= */
+
+section{
+
+padding:120px 10%;
+
+}
+
+.section-title{
+
+font-size:55px;
+
+font-family:'Orbitron',sans-serif;
+
+color:#00f7ff;
+
+margin-bottom:50px;
+
+text-align:center;
+
+text-shadow:
+0 0 15px cyan,
+0 0 30px cyan;
+
+}
+
+/* Glass Cards */
+
+.card{
+
+background:rgba(255,255,255,0.08);
+
+padding:45px;
+
+border-radius:35px;
+
+backdrop-filter:blur(18px);
+
+box-shadow:
+0 0 25px rgba(0,255,255,0.2);
+
+transition:0.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+0 0 40px cyan;
+
+}
+
+/* ========================= */
+/* ABOUT */
+/* ========================= */
+
+.about-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:50px;
+
+align-items:center;
+
+}
+
+.about-img img{
+
+width:100%;
+
+border-radius:35px;
+
+box-shadow:
+0 0 35px cyan;
+
+}
+
+.about-text{
+
+font-size:22px;
+
+line-height:1.9;
+
+}
+
+/* ========================= */
+/* SPONSOR */
+/* ========================= */
 
 .sponsor-card{
 
 background:linear-gradient(
 135deg,
-rgba(255,215,0,0.15),
+rgba(255,215,0,0.2),
 rgba(255,255,255,0.08)
 );
 
 border:3px solid gold;
 
 box-shadow:
-0 0 20px gold,
-0 0 40px gold,
-0 0 80px rgba(255,215,0,0.5);
+0 0 25px gold,
+0 0 50px rgba(255,215,0,0.5);
 
 padding:50px;
 
@@ -79,7 +443,7 @@ border-radius:35px;
 
 text-align:center;
 
-animation:goldGlow 4s infinite alternate;
+animation:goldGlow 5s infinite alternate;
 
 }
 
@@ -87,19 +451,117 @@ animation:goldGlow 4s infinite alternate;
 
 from{
 box-shadow:
-0 0 20px gold,
-0 0 40px gold;
+0 0 20px gold;
 }
 
 to{
 box-shadow:
-0 0 40px gold,
-0 0 80px gold;
+0 0 50px gold;
 }
 
 }
 
-/* Family Cards */
+/* ========================= */
+/* SKILLS */
+/* ========================= */
+
+.skills{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+.skill{
+
+padding:35px;
+
+text-align:center;
+
+border-radius:25px;
+
+background:rgba(255,255,255,0.08);
+
+transition:0.4s;
+
+box-shadow:
+0 0 20px rgba(0,255,255,0.2);
+
+}
+
+.skill:hover{
+
+transform:scale(1.05);
+
+box-shadow:
+0 0 35px cyan;
+
+}
+
+.skill h3{
+
+font-size:30px;
+
+margin-bottom:15px;
+
+color:#00f7ff;
+
+}
+
+/* ========================= */
+/* PROJECTS */
+/* ========================= */
+
+.projects{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:35px;
+
+}
+
+.project{
+
+padding:35px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,0.08);
+
+transition:0.4s;
+
+box-shadow:
+0 0 20px rgba(0,255,255,0.2);
+
+}
+
+.project:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+0 0 40px cyan;
+
+}
+
+.project h3{
+
+font-size:30px;
+
+margin-bottom:18px;
+
+color:#00f7ff;
+
+}
+
+/* ========================= */
+/* FAMILY */
+/* ========================= */
 
 .family-grid{
 
@@ -113,17 +575,18 @@ gap:30px;
 
 .family-card{
 
-background:rgba(255,255,255,0.08);
-
 padding:35px;
 
 border-radius:25px;
+
+background:rgba(255,255,255,0.08);
 
 text-align:center;
 
 transition:0.4s;
 
-box-shadow:0 0 25px rgba(0,255,255,0.2);
+box-shadow:
+0 0 20px rgba(0,255,255,0.2);
 
 }
 
@@ -131,84 +594,137 @@ box-shadow:0 0 25px rgba(0,255,255,0.2);
 
 transform:translateY(-10px);
 
-box-shadow:0 0 40px cyan;
+box-shadow:
+0 0 35px cyan;
 
 }
 
-/* Floating Animation */
+.family-card h3{
 
-.floating{
+font-size:28px;
 
-animation:floating 4s ease-in-out infinite;
+margin-bottom:12px;
 
-}
-
-@keyframes floating{
-
-0%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-15px);
-}
-
-100%{
-transform:translateY(0);
-}
+color:#00f7ff;
 
 }
 
-/* Achievement Special Glow */
+/* ========================= */
+/* ACHIEVEMENTS */
+/* ========================= */
+
+.achievements{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
 
 .achievement{
 
-position:relative;
+padding:35px;
 
-overflow:hidden;
+border-radius:25px;
 
-}
+background:rgba(255,255,255,0.08);
 
-.achievement::before{
+text-align:center;
 
-content:"";
+box-shadow:
+0 0 25px rgba(0,255,255,0.2);
 
-position:absolute;
-
-top:-100%;
-
-left:-100%;
-
-width:300%;
-
-height:300%;
-
-background:linear-gradient(
-45deg,
-transparent,
-rgba(255,255,255,0.2),
-transparent
-);
-
-transform:rotate(25deg);
-
-animation:sweep 8s linear infinite;
+transition:0.4s;
 
 }
 
-@keyframes sweep{
+.achievement:hover{
 
-0%{
-transform:translateX(-100%) rotate(25deg);
-}
+transform:scale(1.05);
 
-100%{
-transform:translateX(100%) rotate(25deg);
-}
+box-shadow:
+0 0 40px cyan;
 
 }
 
-/* Typing Cursor */
+.achievement h2{
+
+font-size:60px;
+
+color:#00f7ff;
+
+margin-bottom:10px;
+
+}
+
+/* ========================= */
+/* QUOTE */
+/* ========================= */
+
+.quote{
+
+text-align:center;
+
+font-size:42px;
+
+font-family:'Orbitron',sans-serif;
+
+line-height:1.8;
+
+padding:100px 10%;
+
+text-shadow:
+0 0 20px cyan;
+
+}
+
+/* ========================= */
+/* CONTACT */
+/* ========================= */
+
+.contact{
+
+text-align:center;
+
+}
+
+.contact p{
+
+font-size:24px;
+
+margin:18px 0;
+
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+background:#050505;
+
+border-top:1px solid rgba(255,255,255,0.08);
+
+margin-top:80px;
+
+}
+
+footer p{
+
+font-size:18px;
+
+}
+
+/* ========================= */
+/* TYPING CURSOR */
+/* ========================= */
 
 #typing::after{
 
@@ -226,66 +742,140 @@ opacity:0;
 
 }
 
-/* Contact Premium */
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
 
-.contact .card{
+@media(max-width:900px){
 
-border:2px solid cyan;
-
-box-shadow:
-0 0 20px cyan,
-0 0 50px rgba(0,255,255,0.3);
-
-}
-
-/* Particle Glow */
-
-.glow{
-
-position:absolute;
-
-width:10px;
-
-height:10px;
-
-background:cyan;
-
-border-radius:50%;
-
-pointer-events:none;
-
-box-shadow:0 0 20px cyan;
-
-animation:fade 0.5s linear forwards;
-
-}
-
-@keyframes fade{
-
-to{
-opacity:0;
-transform:scale(2);
-}
-
-}
-
-/* Mobile Upgrade */
-
-@media(max-width:768px){
-
-.shine-name{
+.hero h1{
 font-size:55px;
 }
 
 .hero p{
-font-size:18px;
+font-size:20px;
+}
+
+.about-grid{
+grid-template-columns:1fr;
+}
+
+.section-title{
+font-size:40px;
+}
+
+.logo{
+font-size:28px;
+}
+
+.logo-sub{
+display:none;
 }
 
 }
 
-/* ========================= */
-/* SPECIAL SPONSOR SECTION */
-/* ========================= */
+</style>
+
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<!-- ========================= -->
+<!-- NAVBAR -->
+<!-- ========================= -->
+
+<nav>
+
+<div class="logo">
+🚀 AJ
+</div>
+
+<div class="logo-sub">
+Future Scientist
+</div>
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#family">Family</a>
+<a href="#achievements">Achievements</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+
+<section class="hero" id="home">
+
+<h1>
+🚀 ARSH JAIN 🚀
+</h1>
+
+<p id="typing"></p>
+
+<button>
+WELCOME TO MY FUTURE
+</button>
+
+</section>
+
+<!-- ========================= -->
+<!-- ABOUT -->
+<!-- ========================= -->
+
+<section id="about">
+
+<h2 class="section-title">
+👦 About Me
+</h2>
+
+<div class="about-grid">
+
+<div class="about-img">
+
+<img src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?q=80&w=1974">
+
+</div>
+
+<div class="about-text card">
+
+<p>
+Hello! I am <b>Arsh Jain</b>, a super intelligent and creative 12-year-old boy from Jaipur, India 🇮🇳 who dreams of becoming a great space scientist in the future.
+</p>
+
+<br>
+
+<p>
+I love playing cricket 🏏, reading space books 🌌, exploring artificial intelligence 🤖, coding 💻, robotics 🦾, and futuristic technologies.
+</p>
+
+<br>
+
+<p>
+I enjoy designing futuristic presentations, learning new digital skills, and building creative projects that inspire people.
+</p>
+
+<br>
+
+<p>
+My mission is:
+<b>Dream Big. Create Bigger. Inspire The Future.</b>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- SPONSOR -->
+<!-- ========================= -->
 
 <section id="sponsor">
 
@@ -293,12 +883,12 @@ font-size:18px;
 🌟 Special Sponsor
 </h2>
 
-<div class="sponsor-card floating">
+<div class="sponsor-card">
 
 <h2 style="
-color:gold;
 font-size:55px;
-text-shadow:0 0 30px gold;
+color:gold;
+text-shadow:0 0 25px gold;
 ">
 
 🏆 Vaishya Community Startup Foundation 🏆
@@ -312,14 +902,14 @@ font-size:26px;
 line-height:1.9;
 ">
 
-Proudly supporting innovation, education, technology, creativity, and future leaders of India 🇮🇳
+Proudly supporting innovation, creativity, technology, and future leaders of India 🇮🇳
 
 </p>
 
 <br>
 
 <h3 style="
-font-size:35px;
+font-size:34px;
 color:#00f7ff;
 ">
 
@@ -331,9 +921,101 @@ Special Respect & Gratitude 💙
 
 </section>
 
-/* ========================= */
-/* FAMILY SECTION */
-/* ========================= */
+<!-- ========================= -->
+<!-- SKILLS -->
+<!-- ========================= -->
+
+<section id="skills">
+
+<h2 class="section-title">
+🧠 My Skills
+</h2>
+
+<div class="skills">
+
+<div class="skill">
+<h3>🤖 AI Tools</h3>
+<p>Advanced AI creativity and prompting skills.</p>
+</div>
+
+<div class="skill">
+<h3>🎨 Canva Design</h3>
+<p>Professional futuristic presentation design.</p>
+</div>
+
+<div class="skill">
+<h3>💻 Coding</h3>
+<p>Building creative websites and projects.</p>
+</div>
+
+<div class="skill">
+<h3>🚀 Innovation</h3>
+<p>Creating futuristic ideas and concepts.</p>
+</div>
+
+<div class="skill">
+<h3>🏏 Cricket</h3>
+<p>Strategic thinking and teamwork through sports.</p>
+</div>
+
+<div class="skill">
+<h3>🌌 Space Knowledge</h3>
+<p>Passionate about astronomy and space science.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- PROJECTS -->
+<!-- ========================= -->
+
+<section id="projects">
+
+<h2 class="section-title">
+🚀 Projects & Interests
+</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>🌌 Future Technology</h3>
+<p>Exploring futuristic AI cities and advanced civilizations.</p>
+</div>
+
+<div class="project">
+<h3>🤖 AI Generated Art</h3>
+<p>Creating cinematic AI images using advanced prompts.</p>
+</div>
+
+<div class="project">
+<h3>🛰️ Space Exploration</h3>
+<p>Studying Mars colonies, rockets, and astronauts.</p>
+</div>
+
+<div class="project">
+<h3>🎬 Creative Presentations</h3>
+<p>Designing award-winning futuristic presentations.</p>
+</div>
+
+<div class="project">
+<h3>🦾 Robotics</h3>
+<p>Learning how intelligent robots help humans.</p>
+</div>
+
+<div class="project">
+<h3>🔬 Science Innovation</h3>
+<p>Combining technology and imagination for the future.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- FAMILY -->
+<!-- ========================= -->
 
 <section id="family">
 
@@ -343,27 +1025,27 @@ Special Respect & Gratitude 💙
 
 <div class="family-grid">
 
-<div class="family-card floating">
+<div class="family-card">
 <h3>👩 Mother</h3>
 <p>Sonam Jain</p>
 </div>
 
-<div class="family-card floating">
+<div class="family-card">
 <h3>👨 Father</h3>
 <p>Navraj Jain</p>
 </div>
 
-<div class="family-card floating">
+<div class="family-card">
 <h3>👵 Grand Mother</h3>
 <p>Asha Jain</p>
 </div>
 
-<div class="family-card floating">
+<div class="family-card">
 <h3>👴 Grand Father</h3>
 <p>Rajendra Kumar Jain</p>
 </div>
 
-<div class="family-card floating">
+<div class="family-card">
 <h3>👦 Cute Brother</h3>
 <p>Lavit Jain</p>
 </div>
@@ -372,9 +1054,27 @@ Special Respect & Gratitude 💙
 
 </section>
 
-/* ========================= */
-/* EXTRA ACHIEVEMENTS */
-/* ========================= */
+<!-- ========================= -->
+<!-- ACHIEVEMENTS -->
+<!-- ========================= -->
+
+<section id="achievements">
+
+<h2 class="section-title">
+🏆 Achievements
+</h2>
+
+<div class="achievements">
+
+<div class="achievement">
+<h2>1st</h2>
+<p>Rank among 4000 participants</p>
+</div>
+
+<div class="achievement">
+<h2>100%</h2>
+<p>Perfect project score</p>
+</div>
 
 <div class="achievement">
 <h2>🧠</h2>
@@ -388,12 +1088,33 @@ Special Respect & Gratitude 💙
 
 <div class="achievement">
 <h2>🚀</h2>
-<p>Strong Extra Knowledge in All Subjects of Class 7</p>
+<p>Strong Extra Knowledge in Class 7</p>
 </div>
 
-/* ========================= */
-/* PREMIUM CONTACT SECTION */
-/* ========================= */
+<div class="achievement">
+<h2>∞</h2>
+<p>Creativity & Imagination</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- QUOTE -->
+<!-- ========================= -->
+
+<section class="quote">
+
+<p>
+"The future belongs to those who imagine it, build it, and never stop dreaming." 🚀
+</p>
+
+</section>
+
+<!-- ========================= -->
+<!-- CONTACT -->
+<!-- ========================= -->
 
 <section id="contact" class="contact">
 
@@ -401,7 +1122,7 @@ Special Respect & Gratitude 💙
 📞 Contact Me
 </h2>
 
-<div class="card floating">
+<div class="card">
 
 <p>👦 Name: Arsh Jain</p>
 
@@ -435,8 +1156,19 @@ THANK YOU FOR VISITING MY FUTURE 🚀
 </section>
 
 <!-- ========================= -->
-<!-- PREMIUM JAVASCRIPT -->
-<!-- PASTE BEFORE </body> -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+<p>
+Made with ❤️ by Arsh Jain | Future Scientist of India 🇮🇳
+</p>
+
+</footer>
+
+<!-- ========================= -->
+<!-- JAVASCRIPT -->
 <!-- ========================= -->
 
 <script>
@@ -470,35 +1202,34 @@ document.addEventListener("mousemove", function(e){
 
 const glow = document.createElement("div");
 
-glow.classList.add("glow");
+glow.style.position = "absolute";
+
+glow.style.width = "10px";
+
+glow.style.height = "10px";
+
+glow.style.borderRadius = "50%";
+
+glow.style.background = "cyan";
 
 glow.style.left = e.pageX + "px";
 
 glow.style.top = e.pageY + "px";
 
+glow.style.pointerEvents = "none";
+
+glow.style.boxShadow = "0 0 20px cyan";
+
 document.body.appendChild(glow);
 
 setTimeout(()=>{
-
 glow.remove();
-
-},500);
+},300);
 
 });
 
-/* Welcome Popup */
-
-window.onload = function(){
-
-setTimeout(()=>{
-
-alert(
-"🚀 Welcome To The Future World Of Arsh Jain 🚀"
-);
-
-},1000);
-
-};
-
 </script>
 
+</body>
+
+</html>
